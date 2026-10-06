@@ -25,12 +25,15 @@ jobs:
       - name: Build Next.js Static Export
         run: npm run build
 
-      - name: Deploy to Oracle Cloud Nginx via SSH
-        uses: easingthemes/ssh-deploy@main
-        with:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: "-rlgoDzP --delete"
-          SOURCE: "out/"
-          REMOTE_HOST: ${{ secrets.SERVER_HOST }}
-          REMOTE_USER: ${{ secrets.SERVER_USER }}
-          TARGET: "/var/www/html"
+      - name: Deploy to Oracle Cloud via SSH & Rsync
+        env:
+          SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          HOST: ${{ secrets.SERVER_HOST }}
+          USER: ${{ secrets.SERVER_USER }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh -o StrictHostKeyChecking=no -o ConnectTimeout=15 $USER@$HOST "sudo chown -R $USER:$USER /var/www/html"
+          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" out/ $USER@$HOST:/var/www/html/
+          ssh -o StrictHostKeyChecking=no $USER@$HOST "sudo chmod -R 755 /var/www/html && sudo systemctl reload nginx || true"
