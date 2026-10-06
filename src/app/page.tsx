@@ -5,6 +5,8 @@ import Preloader from '@/components/ui/Preloader';
 import CustomCursor from '@/components/ui/CustomCursor';
 import Hero from '@/components/sections/Hero';
 import IntroStatement from '@/components/sections/IntroStatement';
+import EditorialCover from '@/components/sections/EditorialCover';
+import CinematicVision from '@/components/sections/CinematicVision';
 import NumbersPinned from '@/components/sections/NumbersPinned';
 import ProjectsSection from '@/components/sections/ProjectsSection';
 import SkillsSection from '@/components/sections/SkillsSection';
@@ -27,7 +29,13 @@ export default function Home() {
       {/* 2. Intro Statement with word-by-word scroll-scrubbed highlight */}
       <IntroStatement />
 
-      {/* 3. Numbers full-screen pinned count-up slides */}
+      {/* 3. Dedicated Full-Screen Editorial Cover Section (100vh magazine spread) */}
+      <EditorialCover />
+
+      {/* 4. Cinematic Vision: Side-Profile Golden-Hour Contemplation Morph */}
+      <CinematicVision />
+
+      {/* 5. Numbers full-screen pinned count-up slides */}
       <NumbersPinned />
 
       {/* 4. Projects (Part A: List with floating velocity card + Part B: Horizontal showcase) */}

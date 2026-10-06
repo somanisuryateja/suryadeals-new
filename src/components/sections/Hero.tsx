@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef, useEffect } from 'react';
+import Image from 'next/image';
 import { personalData } from '@/data/content';
 import { gsap, ScrollTrigger } from '@/lib/gsap';
 import MagneticButton from '@/components/ui/MagneticButton';
@@ -105,10 +106,10 @@ export default function Hero() {
         ref={contentRef}
         className="max-w-7xl mx-auto w-full my-auto flex flex-col justify-center select-none"
       >
-        <div className="overflow-hidden">
+        <div className="overflow-hidden py-1">
           <h1
             ref={line1Ref}
-            className="text-[12vw] sm:text-[10vw] font-display font-extrabold tracking-tighter leading-[0.88] text-light"
+            className="text-[clamp(1.75rem,6.4vw,7.2rem)] font-display font-extrabold tracking-tight leading-[0.92] text-light whitespace-nowrap"
           >
             {nameLine1.split('').map((char, i) => (
               <span key={i} className="inline-block hero-char">
@@ -118,10 +119,10 @@ export default function Hero() {
           </h1>
         </div>
 
-        <div className="overflow-hidden">
+        <div className="overflow-hidden py-1">
           <h1
             ref={line2Ref}
-            className="text-[12vw] sm:text-[10vw] font-display font-extrabold tracking-tighter leading-[0.88] text-accent"
+            className="text-[clamp(1.75rem,6.4vw,7.2rem)] font-display font-extrabold tracking-tight leading-[0.92] text-accent whitespace-nowrap"
           >
             {nameLine2.split('').map((char, i) => (
               <span key={i} className="inline-block hero-char">
@@ -133,13 +134,23 @@ export default function Hero() {
 
         {/* Subtitle & Role */}
         <div className="hero-fade mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-t border-white/[0.08] pt-8">
-          <div className="space-y-1">
-            <h2 className="text-xl sm:text-2xl font-display font-bold text-light">
-              {personalData.role}
-            </h2>
-            <p className="text-xs sm:text-sm font-mono text-muted max-w-xl">
-              1.9+ Years High-Scale Production Engineering @ Codegnan · Dec 2024 – Sep 2026.
-            </p>
+          <div className="flex items-center gap-4">
+            <div className="relative w-14 h-14 rounded-2xl overflow-hidden border border-white/[0.15] ring-2 ring-accent/30 shadow-xl shrink-0 group">
+              <Image
+                src="/images/portrait-studio.jpg"
+                alt="Surya Teja"
+                fill
+                className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="space-y-1">
+              <h2 className="text-xl sm:text-2xl font-display font-bold text-light">
+                {personalData.role}
+              </h2>
+              <p className="text-xs sm:text-sm font-mono text-muted max-w-xl">
+                1.9+ Years High-Scale Production Engineering @ Codegnan · Dec 2024 – Sep 2026.
+              </p>
+            </div>
           </div>
 
           <div className="flex items-center gap-4">

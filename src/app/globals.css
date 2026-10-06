@@ -14,6 +14,7 @@ html {
   background-color: var(--bg);
   color: var(--text);
   scroll-behavior: auto;
+  overflow-x: hidden;
 }
 
 body {

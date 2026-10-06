@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { personalData } from '@/data/content';
 import MagneticButton from '@/components/ui/MagneticButton';
 import { ArrowUp, ArrowUpRight, Copy, Check, Mail, Phone, Linkedin, Github } from 'lucide-react';
@@ -52,10 +53,21 @@ export default function ContactFooter() {
           </div>
 
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10">
-            <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-extrabold tracking-tighter text-light leading-[0.95] max-w-3xl">
-              Let&apos;s build <br />
-              <span className="text-accent">something</span> together.
-            </h2>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8">
+              <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 border-white/[0.2] ring-4 ring-accent/30 shadow-2xl shrink-0 group">
+                <Image
+                  src="/images/portrait-editorial.jpg"
+                  alt="Somani Abdulla Surya Teja"
+                  fill
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-extrabold tracking-tighter text-light leading-[0.95] max-w-2xl">
+                Let&apos;s build <br />
+                <span className="text-accent">something</span> together.
+              </h2>
+            </div>
 
             {/* Giant Round Magnetic "Get in touch" Button */}
             <MagneticButton href={`mailto:${personalData.email}`} strength={0.45}>

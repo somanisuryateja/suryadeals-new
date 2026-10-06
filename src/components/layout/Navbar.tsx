@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { personalData } from '@/data/content';
+import Image from 'next/image';
 import MenuOverlay from './MenuOverlay';
 
 export default function Navbar() {
@@ -12,8 +13,13 @@ export default function Navbar() {
       <nav className="fixed top-0 left-0 right-0 z-40 px-6 sm:px-12 md:px-16 py-6 flex items-center justify-between pointer-events-auto">
         {/* Name / Logo */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="w-8 h-8 rounded-full border border-white/[0.15] bg-[#121212] flex items-center justify-center font-display font-bold text-xs text-light group-hover:border-accent group-hover:text-accent transition-colors">
-            ST
+          <div className="relative w-9 h-9 rounded-full overflow-hidden border border-white/[0.2] ring-2 ring-white/[0.05] group-hover:border-accent transition-all shrink-0">
+            <Image
+              src="/images/portrait-editorial.jpg"
+              alt={personalData.shortName}
+              fill
+              className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
+            />
           </div>
           <div className="flex flex-col">
             <span className="font-display font-bold text-sm tracking-tight text-light group-hover:text-accent transition-colors">
