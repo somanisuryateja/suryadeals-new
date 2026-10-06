@@ -1,0 +1,22 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" rx="16" fill="#0D111A"/>
+  <rect x="20" y="20" width="760" height="460" rx="12" fill="#070A10" stroke="#1E2235" stroke-width="2"/>
+  <circle cx="50" cy="48" r="6" fill="#FF5F56"/>
+  <circle cx="70" cy="48" r="6" fill="#FFBD2E"/>
+  <circle cx="90" cy="48" r="6" fill="#27C93F"/>
+  <rect x="130" y="40" width="300" height="16" rx="8" fill="#151A28"/>
+  <text x="145" y="52" fill="#8A8A8A" font-family="monospace" font-size="11">https://placements.codegnan.com</text>
+  <rect x="50" y="80" width="460" height="40" rx="8" fill="#121828"/>
+  <text x="70" y="106" fill="#F5F5F5" font-family="sans-serif" font-weight="bold" font-size="18">Candidate Screening &amp; Placements Portal</text>
+  <rect x="50" y="140" width="700" height="80" rx="10" fill="#141C30" stroke="#253258"/>
+  <text x="70" y="185" fill="#7C5CFF" font-family="monospace" font-size="22" font-weight="bold">500+ Recruiters · 5-Tier RBAC Role Guards</text>
+  <rect x="50" y="240" width="340" height="200" rx="10" fill="#141C30" stroke="#253258"/>
+  <text x="70" y="280" fill="#00F2FE" font-family="sans-serif" font-size="16" font-weight="bold">Dynamic Reach-Meter</text>
+  <circle cx="150" cy="350" r="45" stroke="#7C5CFF" stroke-width="8" fill="none"/>
+  <circle cx="150" cy="350" r="45" stroke="#00F2FE" stroke-width="8" stroke-dasharray="210 280" fill="none"/>
+  <text x="130" y="358" fill="#F5F5F5" font-family="monospace" font-size="20" font-weight="bold">94%</text>
+  <rect x="410" y="240" width="340" height="200" rx="10" fill="#141C30" stroke="#253258"/>
+  <text x="430" y="280" fill="#10B981" font-family="sans-serif" font-size="16" font-weight="bold">Idempotent Webhooks</text>
+  <text x="430" y="320" fill="#A0AEC0" font-family="sans-serif" font-size="13">Razorpay SHA-256 Verification</text>
+  <text x="430" y="350" fill="#A0AEC0" font-family="sans-serif" font-size="13">0 Duplicate Charges Over 1,000+ Payments</text>
+</svg>

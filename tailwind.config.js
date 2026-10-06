@@ -8,13 +8,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        obsidian: '#090A0F',
-        card: '#0F111A',
-        cardHover: '#141724',
-        borderHairline: '#1E2235',
-        accentViolet: '#8A2BE2',
-        accentCyan: '#00F2FE',
-        accentEmerald: '#10B981',
+        dark: '#0a0a0a',
+        darkMuted: '#121212',
+        light: '#f5f5f5',
+        muted: '#8a8a8a',
+        accent: 'var(--accent, #7c5cff)',
+        accentHover: '#6a46f8',
+      },
+      fontFamily: {
+        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-display)', 'var(--font-sans)', 'sans-serif'],
       },
     },
   },

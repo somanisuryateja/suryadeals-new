@@ -3,108 +3,104 @@
 @tailwind utilities;
 
 :root {
-  --background: #05070E;
-  --foreground: #F8FAFC;
+  --accent: #7c5cff;
+  --bg: #0a0a0a;
+  --text: #f5f5f5;
+  --muted: #8a8a8a;
+}
+
+/* Base resets & typography */
+html {
+  background-color: var(--bg);
+  color: var(--text);
+  scroll-behavior: auto;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
   overflow-x: hidden;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
 
-/* Custom cinematic scrollbar */
+/* Dennis & Apple style selection */
+::selection {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+/* Lenis Recommended CSS */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Minimalist noise overlay */
+.grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* Thin luxury borders */
+.border-subtle {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.border-subtle-hover {
+  transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.border-subtle-hover:hover {
+  border-color: rgba(124, 92, 255, 0.4);
+}
+
+/* Custom minimal scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #05070E;
+  background: #0a0a0a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1E2235;
-  border-radius: 9999px;
+  background: #222222;
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8A2BE2;
+  background: var(--accent);
 }
 
-/* Cinematic Grid Pattern */
-.cyber-grid {
-  background-size: 40px 40px;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+/* Accessible focus outline */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
-.cyber-grid-dense {
-  background-size: 20px 20px;
-  background-image: 
-    linear-gradient(to right, rgba(0, 242, 254, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(138, 43, 226, 0.04) 1px, transparent 1px);
-}
-
-/* Glassmorphism Classes */
-.glass-panel {
-  background: rgba(13, 16, 28, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-}
-
-.glass-panel-hover {
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.glass-panel-hover:hover {
-  background: rgba(18, 23, 40, 0.85);
-  border-color: rgba(0, 242, 254, 0.35);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px -10px rgba(0, 242, 254, 0.15), 0 0 20px -5px rgba(138, 43, 226, 0.15);
-}
-
-/* Animated Aurora Glows */
-@keyframes aurora-flow {
-  0% { transform: translate(0%, 0%) rotate(0deg) scale(1); }
-  50% { transform: translate(15%, 8%) rotate(180deg) scale(1.15); }
-  100% { transform: translate(0%, 0%) rotate(360deg) scale(1); }
-}
-
-.aurora-orb-1 {
-  animation: aurora-flow 25s ease-in-out infinite;
-}
-
-.aurora-orb-2 {
-  animation: aurora-flow 20s ease-in-out infinite reverse;
-}
-
-/* Border Shimmer / Neon Lines */
-@keyframes border-shimmer {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.shimmer-border {
-  background: linear-gradient(90deg, #8A2BE2, #00F2FE, #10B981, #8A2BE2);
-  background-size: 300% 300%;
-  animation: border-shimmer 6s linear infinite;
-}
-
-/* Audio wave animation */
-@keyframes wave-bounce {
-  0%, 100% { height: 4px; }
-  50% { height: 20px; }
-}
-
-.wave-bar {
-  animation: wave-bounce 1.2s ease-in-out infinite;
-}
-
-/* Radial spotlight effect */
-.spotlight-radial {
-  background: radial-gradient(circle at center, rgba(0, 242, 254, 0.15) 0%, transparent 70%);
+/* Reduced motion overrides */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
