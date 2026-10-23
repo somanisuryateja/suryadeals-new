@@ -84,8 +84,8 @@ export default function AboutEducation() {
               {/* Metrics strip */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-white/[0.08]">
                 <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06]">
-                  <span className="font-display font-bold text-xl sm:text-2xl text-light block">1.9+ Years</span>
-                  <span className="font-mono text-[11px] text-muted">Production Exp.</span>
+                  <span className="font-display font-bold text-xl sm:text-2xl text-light block">3+ Years</span>
+                  <span className="font-mono text-[11px] text-muted">Cumulative Exp.</span>
                 </div>
                 <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06]">
                   <span className="font-display font-bold text-xl sm:text-2xl text-accent block">246 PRs</span>

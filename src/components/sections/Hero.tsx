@@ -148,7 +148,7 @@ export default function Hero() {
                 {personalData.role}
               </h2>
               <p className="text-xs sm:text-sm font-mono text-muted max-w-xl">
-                1.9+ Years High-Scale Production Engineering @ Codegnan · Dec 2024 – Sep 2026.
+                3+ Years Cumulative Engineering · 21m High-Scale Prod @ Codegnan (Relieved).
               </p>
             </div>
           </div>

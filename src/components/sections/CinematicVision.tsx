@@ -161,7 +161,7 @@ export default function CinematicVision() {
               </h3>
 
               <p className="text-slate-300 font-sans text-xs sm:text-sm md:text-base leading-relaxed">
-                Proven track record across 1.9+ years at Codegnan IT Solutions: managing 246 PRs, 963 commits, and deploying multi-tenant production architectures that reliably serve thousands daily.
+                Proven track record across 3+ years of cumulative software engineering: managing 246 PRs, 963 commits at Codegnan, and deploying multi-tenant production architectures that reliably serve thousands daily.
               </p>
 
               <div className="pt-2 text-[11px] sm:text-xs font-mono text-emerald-400 flex items-center gap-2">
