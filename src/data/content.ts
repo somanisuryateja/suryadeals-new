@@ -246,7 +246,7 @@ export const educationData: EducationItem[] = [
   {
     degree: "Cyber Security / VAPT Certification",
     institution: "Berry9 IT Services",
-    period: "2023",
+    period: "2019",
     details: "Vulnerability Assessment & Penetration Testing certification",
   },
 ];
