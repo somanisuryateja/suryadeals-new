@@ -53,7 +53,7 @@ export const personalData = {
   website: "suryadeals.com",
   availability: "Available to join immediately",
   noticePeriod: "0 Days (Officially Relieved Sep 26, 2026)",
-  summary: "Full Stack & Applied AI Engineer shipping enterprise web platforms, scalable APIs, and real-time voice AI. Owned delivery across 10 production repositories serving 5,000+ users (246 PRs, 963 commits). Specialized in TypeScript, Python (FastAPI), Node.js, Next.js, Docker, AWS and Vitest.",
+  summary: "Full Stack & Applied AI Engineer with 3+ years of cumulative software development experience shipping enterprise web platforms, scalable APIs, and real-time voice AI. Owned delivery across 10 production repositories serving 5,000+ users (246 PRs, 963 commits). Specialized in TypeScript, Python (FastAPI), Node.js, Next.js, Docker, AWS and Vitest.",
 };
 
 export const statsData: StatItem[] = [
@@ -193,6 +193,18 @@ export const experienceData: ExperienceItem[] = [
       "Reduced server CPU by 40% with direct AWS S3 presigned URL uploads and HLS adaptive streaming.",
       "Maintained 80%+ test coverage with Vitest, passing SonarQube quality gates on all releases.",
       "Secured 40+ endpoints with 5-tier RBAC, JWT access tokens, and automatic refresh token rotation.",
+    ],
+  },
+  {
+    role: "Freelance Frontend Developer (Contract)",
+    company: "Business Aacharya",
+    location: "Hyderabad, India (Remote)",
+    period: "Jun 2020 — Oct 2021",
+    status: "16-Month Contract Completed",
+    highlights: [
+      "Built responsive layouts, client dashboards, and profile workflows using HTML5, CSS3, JavaScript (ES6+), and React.js.",
+      "Connected frontend views to RESTful APIs, collaborating with developers managing authentication and core API services.",
+      "Optimized cross-browser performance, form validation, and component rendering based on client requirements.",
     ],
   },
 ];
